@@ -28,15 +28,29 @@ export const crearTodoHtml = (todo) => {
 
 //eventos
 txtInput.addEventListener('keyup', (event) => {
-  // console.log(event)
   if (event.keyCode === 13 && txtInput.value.length > 0) {
-    // console.log(txtInput.value)
     const nuevoTodo = new Todo(txtInput.value)
     todoList.nuevoTodo(nuevoTodo)
-    // console.log(todoList)
-    // console.log(nuevoTodo)
 
     crearTodoHtml(nuevoTodo)
     txtInput.value = ''
+  }
+})
+
+divTodoList.addEventListener('click', (event) => {
+  // console.log('click')
+  // console.log(event)
+  // console.log(event.target)
+  // console.log(event.target.localName)
+  const nombreElemento = event.target.localName // input, label, button
+  const todoElemento = event.target.parentElement.parentElement
+  // console.log(todoElemento)
+  const todoId = todoElemento.getAttribute('data-id')
+  // console.log(todoId)
+  if (nombreElemento.includes('input')) {
+    //click en el check
+    todoList.marcarCompletado(todoId)
+    // console.log(todoList)
+    todoElemento.classList.toggle('completed')
   }
 })
