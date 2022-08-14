@@ -14,7 +14,12 @@ export class TodoList {
   }
 
   marcarCompletado(id) {
-    // TODO: Implementar método
+    for (const todo of this.todos) {
+      if (todo.id === id.toString()) {
+        todo.completado = !todo.completado
+        break
+      }
+    }
   }
 
   eliminarCompletado() {
