@@ -1,8 +1,11 @@
 // Referencias en el html
+import { Todo } from '../classes'
+import { todoList } from '../index'
 
 const divTodoList = document.querySelector('.todo-list')
+const txtInput = document.querySelector('.new-todo')
 
-export const crarTodoHtml = (todo) => {
+export const crearTodoHtml = (todo) => {
   const htmlTodo = `
     <li class="${todo.completado ? 'completed' : ''}" data-id="${todo.id}">
         <div class="view">
@@ -22,3 +25,18 @@ export const crarTodoHtml = (todo) => {
 
   return div.firstElementChild
 }
+
+//eventos
+txtInput.addEventListener('keyup', (event) => {
+  // console.log(event)
+  if (event.keyCode === 13 && txtInput.value.length > 0) {
+    // console.log(txtInput.value)
+    const nuevoTodo = new Todo(txtInput.value)
+    todoList.nuevoTodo(nuevoTodo)
+    // console.log(todoList)
+    // console.log(nuevoTodo)
+
+    crearTodoHtml(nuevoTodo)
+    txtInput.value = ''
+  }
+})
