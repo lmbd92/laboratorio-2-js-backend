@@ -1,20 +1,14 @@
-# Webpack Starter
+# Laboratorio 1 JavaScript - Backend
 
-Este es el proyecto inicial para crear aplicaciones utilizando webpack.
+El objetivo de esta actividad es crear un juego **BlackJack** con el que se pretende practicar temas como arreglos, funciones, objetos, etc.
+En este repositorio se han incluido [**12 versiones**](https://github.com/codigoc13/laboratorio-2-js-backend/releases) que sirven como paso a paso para desarrollar el proyecto.
 
-### Notas:
-Se deben reconstruir los módulos de node.
+![image](https://user-images.githubusercontent.com/64823934/184569395-6c5c1217-11e3-4ddf-8502-fd07d6deb405.png)
 
-`npm install`
 
-Para construir el buil
 
-`npm run build`
 
-Para correr el servidor de desarrollo
 
-`npm start`
-
-Actividad basado en su mayoría en el curso [Udemy - JavaScript Moderno: Guía para dominar el lenguaje ](https://www.udemy.com/course/javascript-fernando-herrera/) de [Fernando Herrera](https://fernando-herrera.com/#/), autor que recomiendo fehacientemente para el aprendizaje de muchas tecnologías de la información.
+Laboratorio basado en su mayoría en actividad del curso [Udemy - JavaScript Moderno: Guía para dominar el lenguaje ](https://www.udemy.com/course/javascript-fernando-herrera/) de [Fernando Herrera](https://fernando-herrera.com/#/), autor que recomiendo fehacientemente para el aprendizaje de muchas tecnologías de la información.
 
 [**Sergio Manrique**](https://www.linkedin.com/in/seraleman/) - Editor de actividad 
