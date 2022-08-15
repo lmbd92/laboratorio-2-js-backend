@@ -22,7 +22,7 @@ export class TodoList {
     }
   }
 
-  eliminarCompletado() {
-    // TODO: Implementar método
+  eliminarCompletados() {
+    this.todos = this.todos.filter((todo) => !todo.completado)
   }
 }
