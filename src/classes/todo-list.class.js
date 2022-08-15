@@ -1,8 +1,7 @@
-// Est clase va a agrupar toda la lista de todos
+import { Todo } from './todo.class'
 
 export class TodoList {
   constructor() {
-    // this.todos = []
     this.cargarLocalstorage()
   }
 
@@ -32,22 +31,14 @@ export class TodoList {
   }
 
   guardarLocalStorage() {
-    // localStorage.setItem('todo', this.todos)
     localStorage.setItem('todo', JSON.stringify(this.todos))
   }
 
   cargarLocalstorage() {
-    // if (localStorage.getItem('todo')) {
-    //   // this.todos = localStorage.getItem('todo')
-    //   this.todos = JSON.parse(localStorage.getItem('todo'))
-    //   console.log('cargar local storage:', this.todos)
-    //   console.log(typeof this.todos)
-    // } else {
-    //   this.todos = []
-    // }
-
     this.todos = localStorage.getItem('todo')
       ? JSON.parse(localStorage.getItem('todo'))
       : []
+
+    this.todos = this.todos.map((obj) => Todo.fromJson(obj))
   }
 }
