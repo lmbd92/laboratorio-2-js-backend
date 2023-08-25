@@ -1,5 +1,7 @@
 # Laboratorio 2 JavaScript - Backend
 
+[Demo](https://lmbd92.github.io/laboratorio-2-js-backend/#/)
+
 El objetivo de esta actividad es crear una lista de tareas que se puedan ir gestionando con el que se pretende practicar temas como arreglos, funciones, objetos, etc.
 En este repositorio se han incluido [**12 versiones**](https://github.com/codigoc13/laboratorio-2-js-backend/releases) que sirven como paso a paso para desarrollar el proyecto.
 
